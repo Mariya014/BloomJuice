@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Log in</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="login.html" class="active">Log in</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search">
+        <input type="search" placeholder="Search product" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span>Log in</span>
+  </nav>
+
+  <!-- Login Section -->
+  <section class="login-section">
+    <div class="container">
+      <h1>Log in</h1>
+      <form id="login-form">
+        <!-- Username -->
+        <div class="form-group">
+          <label for="username">User name</label>
+          <div class="input-group">
+            <span class="input-icon">●</span>
+            <input type="text" id="username" placeholder="Enter user" required />
+            <a href="#" class="forgot-link">Forgot password</a>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <span class="input-icon">●</span>
+            <input type="password" id="password" placeholder="Enter your password" required />
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-row">
+          <button type="submit" class="btn">Log in</button>
+          <button type="button" class="btn outline" id="register-btn">Register</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Customer service</a></li>
+          <li><a href="#">How to guides</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <p>Let’s stay in touch! Sign up to our newsletter and get the best deals!</p>
+      <form>
+        <input type="email" placeholder="Insert your email address here" />
+        <button type="submit" class="btn small">Subscribe now</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/icon-facebook.svg" alt="Facebook" />
+      <img src="images/icon-instagram.svg" alt="Instagram" />
+    </div>
+  </footer>
+
+  <script src="js/login.js" defer></script>
+</body>
+</html>

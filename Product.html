@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Peachy Coconut Cooler</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/Styles.css" />
+<link rel="stylesheet" href="css/product.css" />
+  <!-- PayPal SDK: replace YOUR_CLIENT_ID with your real client ID -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=AUD"></script>
+  
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <!-- Banner + Header (same as juice.html) -->
+  <div class="banner">For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="juice.html">Juice</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"><input type="search" placeholder="Search product" /></div>
+    </div>
+  </header>
+
+  <!-- Product Details -->
+  <main class="container">
+    <div class="product-main">
+
+      <!-- Left: Product image -->
+      <div class="product-image">
+        <img src="images/peach-smoothie.webp" alt="Peachy Coconut Cooler">
+      </div>
+
+      <!-- Right: Details -->
+      <div class="product-info">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> <span>›</span>
+          <a href="juice.html">All products</a> <span>›</span>
+          <span>Peachy Coconut Cooler</span>
+        </div>
+
+        <h1>Peachy Coconut Cooler</h1>
+        <p class="subtitle">tropical delight with ripe peaches</p>
+
+        <div class="rating">
+          <span>Strong &amp; Energizing</span>
+          <span class="stars">★★★★★</span>
+          <small>(483 Reviews)</small>
+        </div>
+
+        <p class="description">
+          This juice is known for its strong, robust flavor and its refreshing, invigorating aroma.
+          It’s a popular choice for those who enjoy a bold, full-bodied juice experience. A number
+          of health benefits may include improved digestion and immune support.
+        </p>
+
+        <div class="option-buttons">
+          <button>Loose leaf juice</button>
+          <button>Juice bags</button>
+        </div>
+
+        <div class="quantity-price">
+          <div class="quantity">
+            <button id="dec">−</button>
+            <span id="qty">1</span>
+            <button id="inc">+</button>
+          </div>
+          <div class="price">$<span id="price-val">31.00</span></div>
+        </div>
+
+        <div class="purchase-buttons">
+          <a href="purchase.html" class="btn">Check out</a>
+          <!-- PayPal Button container -->
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shop similar (reuse your bestsellers markup)… -->
+
+  <!-- Footer (same logo class) -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <!-- …Help & Other lists… -->
+    </div>
+    <!-- …Newsletter & socials… -->
+  </footer>
+
+  <!-- Quantity & PayPal Script -->
+  <script>
+    // Quantity logic
+    const qtyEl = document.getElementById('qty');
+    const priceEl = document.getElementById('price-val');
+    let qty = 1;
+    const unitPrice = 31.00;
+    document.getElementById('inc').onclick = () => {
+      qty++;
+      update();
+    };
+    document.getElementById('dec').onclick = () => {
+      if (qty > 1) qty--;
+      update();
+    };
+    function update() {
+      qtyEl.textContent = qty;
+      priceEl.textContent = (unitPrice * qty).toFixed(2);
+    }
+
+    // PayPal Buttons
+    paypal.Buttons({
+      style: { layout: 'horizontal' },
+      createOrder: (data, actions) => {
+        const amount = document.getElementById('price-val').textContent;
+        return actions.order.create({
+          purchase_units: [{
+            amount: { value: amount }
+          }]
+        });
+      },
+      onApprove: (data, actions) => {
+        return actions.order.capture().then(details => {
+          alert('Thanks for your purchase, ' + details.payer.name.given_name + '!');
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Checkout</title>
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/Styles.css" />
+  <!-- Purchase page styles -->
+  <link rel="stylesheet" href="css/purchase.css" />
+</head>
+<body>
+
+  <!-- Banner -->
+  <div class="banner">
+    For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong>
+  </div>
+
+  <!-- Header/Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="juice.html">Juice</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"><input type="search" placeholder="Search product" /></div>
+    </div>
+  </header>
+
+  <!-- Purchase Section -->
+  <section class="purchase-page">
+    <div class="container purchase-section">
+
+      <!-- Items Overview -->
+      <div class="overview">
+        <a href="javascript:history.back()" class="back">← Back</a>
+        <h2>Items overview</h2>
+        <p>This is your order summary where you can edit and delete your order and select your preferred delivery type.</p>
+
+        <div class="item-card">
+          <img src="images/peach-smoothie.webp" alt="Peachy Coconut Cooler">
+          <div class="item-info">
+            <h3>
+              Peachy Coconut Cooler
+              <span class="item-price">$31</span>
+            </h3>
+            <p>Packed Bags<br>Quantity: 1</p>
+          </div>
+        </div>
+
+        <h3>Available Shipping Methods</h3>
+        <div class="shipping-methods">
+          <label>
+            <input type="radio" name="shipping" checked>
+            Post Office Delivery
+            <span class="method-price">Free</span>
+          </label>
+        </div>
+
+        <h3>Payment Options</h3>
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="pay" checked>
+            Mobile Pay
+          </label>
+        </div>
+        <div class="card-logos">
+          <img src="images/paypal.svg" alt="PayPal">
+          <img src="images/unionpay.svg" alt="UnionPay">
+          <img src="images/mastercard.svg" alt="Mastercard">
+          <img src="images/opay.svg" alt="O‘Pay">
+          <img src="images/visa.svg" alt="Visa">
+          <img src="images/amex.svg" alt="AmEx">
+          <img src="images/affirm.svg" alt="Affirm">
+        </div>
+      </div>
+
+      <!-- Payment Details -->
+      <div class="payment-details">
+        <div class="pickup-delivery">
+          <button class="opt-btn active">Pick up</button>
+          <button class="opt-btn">Delivery</button>
+        </div>
+
+        <h2>Payment details</h2>
+        <p>Fill in your payment details and complete the order.</p>
+
+        <form>
+          <input type="email" placeholder="Email Address" required>
+          <input type="text" placeholder="Full Name" required>
+          <input type="text" placeholder="Address" required>
+          <input type="text" placeholder="City" required>
+          <input type="text" placeholder="Zip Code" required>
+          <button type="submit" class="btn full">Finish purchase</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Customer service</a></li>
+          <li><a href="#">How to guides</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <p>Let’s stay in touch! Sign up to our newsletter and get the best deals!</p>
+      <form>
+        <input type="email" placeholder="Insert your email address here" />
+        <button type="submit" class="btn small">Subscribe now</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/icon-facebook.svg" alt="Facebook">
+      <img src="images/icon-instagram.svg" alt="Instagram">
+    </div>
+  </footer>
+
+</body>
+</html>

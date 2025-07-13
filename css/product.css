@@ -1,0 +1,103 @@
+    /* ===== PRODUCT DETAILS ===== */
+    .product-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+    .product-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+    }
+    .product-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .breadcrumbs {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .breadcrumbs a { color: var(--dark-grey); text-decoration: none; }
+    .breadcrumbs span { margin: 0 0.5rem; }
+
+    .product-info h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+    .product-info .subtitle {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--dark-grey);
+      margin-bottom: 1rem;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .rating .stars { color: #f5a623; }
+
+    .product-info .description {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .option-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .option-buttons button {
+      flex: 1;
+      padding: 0.6rem;
+      border: 2px solid var(--dark-grey);
+      background: transparent;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .quantity-price {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .quantity button {
+      width: 32px;
+      height: 32px;
+      border: none;
+      background: var(--dark-grey);
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .quantity span {
+      min-width: 24px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .price {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .purchase-buttons {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .purchase-buttons .btn {
+      margin-top: 0;
+    }
+
+    @media (max-width: 768px) {
+      .product-main { flex-direction: column; align-items: center; }
+    }
