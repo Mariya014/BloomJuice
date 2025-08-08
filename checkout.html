@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Bloom Juice — Secure Checkout</title>
+
+  <!-- PayPal SDK -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=AUD"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+  <div class="banner">For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="Bloom Juice logo" class="logo-img"></a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="juice.html">Juice</a>
+        <a href="checkout.html" style="text-decoration:underline">Checkout</a>
+      </nav>
+      <div class="search"><input type="search" placeholder="Search product"></div>
+    </div>
+  </header>
+
+  <div class="checkout container">
+    <div class="checkout-left">
+      <a class="back" href="juice.html">← Back to products</a>
+      <h2>Items overview</h2>
+      <p>This is your order summary where you can edit your order and select shipping.</p>
+
+      <div id="cart-items"></div>
+
+      <div>
+        <div class="section-title">Available Shipping Methods</div>
+        <div class="radio-group">
+          <label><input type="radio" name="shipping" checked> Post Office Delivery <span>Free</span></label>
+          <label><input type="radio" name="shipping"> Express Courier <span>$9.95</span></label>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Payment Options</div>
+        <div class="radio-group">
+          <label><input type="radio" name="method" checked> Pay with card / PayPal / Afterpay</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="checkout-right">
+      <div class="pickup-delivery">
+        <button id="pickup" class="active">Pick up</button>
+        <button id="delivery">Delivery</button>
+      </div>
+
+      <h2>Payment details</h2>
+      <p>Fill in your payment details and complete the order.</p>
+
+      <form id="checkout-form" class="checkout-form">
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text"  id="full-name" placeholder="Full Name" required>
+        <input type="text"  id="address"   placeholder="Address" required>
+        <input type="text"  id="city"      placeholder="City" required>
+        <input type="text"  id="zip"       placeholder="Zip Code" required>
+      </form>
+
+      <div id="paypal-button-container"></div>
+
+      <a href="card.html" class="finish-purchase-btn" style="display:inline-block;margin-top:20px;padding:12px 24px;background:#000;color:#fff;text-align:center;text-decoration:none;border-radius:6px;font-weight:bold;">
+        Finish Purchase with Card
+      </a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get("product");
+
+      const products = {
+        "banana-smoothie": {
+          name: "Banana Smoothie",
+          desc: "Creamy Banana Dream blended with yogurt and golden honey.",
+          image: "images/banana-smoothie.webp"
+        },
+        "berry-bliss-medley": {
+          name: "Berry Bliss Medley",
+          desc: "Strawberries, blueberries, and raspberries. Antioxidant-rich.",
+          image: "images/berry-medley.webp"
+        },
+        "cocoa-almond-bliss": {
+          name: "Cocoa Almond Bliss",
+          desc: "Cocoa butter, almond butter, and banana. Protein-rich treat.",
+          image: "images/cocoa-almond.webp"
+        },
+        "green-power-punch": {
+          name: "Green Power Punch",
+          desc: "Kale, spinach, apple, celery. Clean and energizing.",
+          image: "images/green-juice.webp"
+        },
+        "peachy-coconut-cooler": {
+          name: "Peachy Coconut Cooler",
+          desc: "Peach and coconut blend to support immunity.",
+          image: "images/peach-smoothie.webp"
+        },
+        "tropical-mix": {
+          name: "Tropical Mix",
+          desc: "Orange, pineapple and lime. Vitamin C boost.",
+          image: "images/tropical-mix.webp"
+        }
+      };
+
+      const unitPrice = 31;
+      let cart = JSON.parse(localStorage.getItem("cart")) || {};
+
+      if (key && products[key]) {
+        if (cart[key]) {
+          cart[key].qty += 1;
+        } else {
+          cart[key] = {
+            ...products[key],
+            qty: 1,
+            price: unitPrice
+          };
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
+
+      const cartContainer = document.getElementById("cart-items");
+      const itemList = Object.entries(cart);
+
+      itemList.forEach(([id, item]) => {
+        if (!item.name || !item.price) return;
+
+        const itemCard = document.createElement("div");
+        itemCard.className = "item-card";
+        itemCard.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="item-info">
+            <h3>${item.name} <span class="price" id="price-${id}">$${(item.price * item.qty).toFixed(2)}</span></h3>
+            <p>${item.desc}</p>
+            <div class="qty-buttons">
+              <button onclick="updateQty('${id}', -1)">−</button>
+              <span id="qty-${id}">${item.qty}</span>
+              <button onclick="updateQty('${id}', 1)">+</button>
+            </div>
+          </div>
+        `;
+        cartContainer.appendChild(itemCard);
+      });
+
+      window.updateQty = function (id, change) {
+        if (cart[id]) {
+          cart[id].qty = Math.max(1, cart[id].qty + change);
+          document.getElementById(`qty-${id}`).textContent = cart[id].qty;
+          document.getElementById(`price-${id}`).textContent = `$${(cart[id].price * cart[id].qty).toFixed(2)}`;
+          localStorage.setItem("cart", JSON.stringify(cart));
+        }
+      };
+
+      const total = itemList.reduce((sum, [_, item]) => sum + item.qty * item.price, 0);
+
+      paypal.Buttons({
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [{
+              amount: { value: total.toFixed(2) }
+            }]
+          });
+        },
+        onApprove: (data, actions) => {
+          return actions.order.capture().then(details => {
+            alert(`Thank you ${details.payer.name.given_name}! Your payment is complete.`);
+            localStorage.removeItem("cart");
+          });
+        }
+      }).render('#paypal-button-container');
+
+      document.getElementById("pickup").onclick = () => {
+        document.getElementById("pickup").classList.add("active");
+        document.getElementById("delivery").classList.remove("active");
+      };
+      document.getElementById("delivery").onclick = () => {
+        document.getElementById("delivery").classList.add("active");
+        document.getElementById("pickup").classList.remove("active");
+      };
+      // Ensure we always save the latest cart before moving to card.html
+document.getElementById("go-to-card").addEventListener("click", () => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.location.href = "card.html";
+});
+    });
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Berry Bliss Medley</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/Styles.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+
+  <!-- Banner + Header -->
+  <div class="banner">For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="juice.html">Juice</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"><input type="search" placeholder="Search product" /></div>
+    </div>
+  </header>
+
+  <!-- Product Details -->
+  <main class="container">
+    <div class="product-main">
+
+      <!-- Left: Product image -->
+      <div class="product-image">
+        <img src="images/berry-medley.webp" alt="Berry Bliss Medley">
+      </div>
+
+      <!-- Right: Details -->
+      <div class="product-info">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> <span>›</span>
+          <a href="juice.html">All products</a> <span>›</span>
+          <span>Berry Bliss Medley</span>
+        </div>
+
+        <h1>Berry Bliss Medley</h1>
+        <p class="subtitle">a vibrant blend of juicy berries</p>
+
+        <div class="rating">
+          <span>Fresh &amp; Sweet</span>
+          <span class="stars">★★★★★</span>
+          <small>(102 Reviews)</small>
+        </div>
+
+        <p class="description">
+          A rich medley of strawberries, blueberries, raspberries, and blackberries for a sweet yet refreshing taste. Packed with antioxidants, it’s a berry lover’s dream.
+        </p>
+
+        <div class="quantity-price">
+          <div class="quantity">
+            <button id="dec">−</button>
+            <span id="qty">1</span>
+            <button id="inc">+</button>
+          </div>
+          <div class="price">$<span id="price-val">31.00</span></div>
+        </div>
+
+        <div class="purchase-buttons">
+          <a href="checkout.html?product=berry-bliss-medley" class="btn">Check out</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <!-- Add footer help links if needed -->
+    </div>
+  </footer>
+
+  <!-- Quantity Script -->
+  <script>
+    const qtyEl = document.getElementById('qty');
+    const priceEl = document.getElementById('price-val');
+    let qty = 1;
+    const unitPrice = 31.00;
+    document.getElementById('inc').onclick = () => {
+      qty++;
+      update();
+    };
+    document.getElementById('dec').onclick = () => {
+      if (qty > 1) qty--;
+      update();
+    };
+    function update() {
+      qtyEl.textContent = qty;
+      priceEl.textContent = (unitPrice * qty).toFixed(2);
+    }
+  </script>
+</body>
+</html>

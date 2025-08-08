@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Success</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #fcd34d; /* Yellow */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left h1 {
+      color: #000;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .left a.button {
+      text-decoration: none;
+      background-color: #000;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .left a.button:hover {
+      background-color: #333;
+    }
+
+    .right {
+      flex: 1; 
+    }
+    .right img{
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <h1>Order Success !</h1>
+    <a class="button" href="index.html">Go to Home</a>
+  </div>
+  <div class="right">
+    <img src="images\success.jpg" alt="">
+  </div>
+</body>
+</html>

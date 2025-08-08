@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    background-color: #a7f3d0;
+    padding: 20px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar h2 {
+    font-size: 20px;
+    color: #000;
+    
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.sidebar li i {
+    margin-right: 10px;
+}
+
+.report-buttons button {
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.sidebar-bottom p {
+    margin: 10px ;
+}
+
+.main {
+    flex: 1;
+    background-color: #fde047;
+    padding: 30px;
+     overflow-y: auto;
+}
+
+.topbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard-title {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.widget {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); 
+    justify-content: space-between;
+    width: 100%;
+}
+.widget.red {
+    background-color: #f87171;
+    color: white;
+    grid-column: span 3;
+    padding: 1px;
+    width: 95%;
+    margin-right: 5px;
+}
+
+.widget.red img {
+    height: 200px;
+    width: 100%;
+}
+
+.widget h3 {
+    margin-top: 0;
+}
+
+.amount {
+    font-size: 24px;
+    color: #059669;
+    margin: 10px 0;
+}
+
+.transactions {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.transaction-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.transaction-item i {
+    margin-right: 10px;
+}
+
+.inventory-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.left-panel {
+    width: 50%;
+    justify-content: space-between;
+     gap: 10px;
+     display: grid;
+}
+
+.right-panel {
+    width: 50%;
+    gap: 30px;
+}

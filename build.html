@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Build Your Own Juice</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="css/build.css"/>
+</head>
+<body>
+
+  <!-- Banner + Header -->
+  <div class="banner">
+    For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img"/>
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="login.html">Log in</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search">
+        <input type="search" placeholder="Search product"/>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero with “Build your own juice” -->
+  <section class="build-hero">
+    <img src="images/hero-fruits.jpg" alt="Splash of fruits"/>
+    <div class="build-hero__title">Build your own juice</div>
+  </section>
+
+  <!-- Builder Section -->
+  <main class="build-section container">
+    <!-- Left: pick your favourites -->
+    <aside class="ingredients-sidebar">
+      <h2>Pick your favourites</h2>
+      <div class="ingredients-grid">
+        <!-- Strawberries -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Strawberries"/>
+            <img src="images/strawberries.jpg" alt="Strawberries"/>
+            <div class="ingredient-info">
+              <span>Strawberries</span>
+              <span class="price">$14</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Spinach -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Spinach"/>
+            <img src="images/spinach.jpg" alt="Spinach"/>
+            <div class="ingredient-info">
+              <span>Spinach</span>
+              <span class="price">$10</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Blueberries -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Blueberries"/>
+            <img src="images/blueberries.jpg" alt="Blueberries"/>
+            <div class="ingredient-info">
+              <span>Blueberries</span>
+              <span class="price">$12</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Cabbage -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Cabbage"/>
+            <img src="images/cabbage.jpg" alt="Cabbage"/>
+            <div class="ingredient-info">
+              <span>Cabbage</span>
+              <span class="price">$9</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Syrup Bottles -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Juice Syrup"/>
+            <img src="images/syrup-bottles.jpg" alt="Juice Syrup Bottles"/>
+            <div class="ingredient-info">
+              <span>Syrup</span>
+              <span class="price">$8</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Pineapples -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Pineapples"/>
+            <img src="images/pineapples.jpg" alt="Pineapples"/>
+            <div class="ingredient-info">
+              <span>Pineapples</span>
+              <span class="price">$11</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Red Apples -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Red Apples"/>
+            <img src="images/red-apples.jpg" alt="Red Apples"/>
+            <div class="ingredient-info">
+              <span>Red Apples</span>
+              <span class="price">$13</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Green Apples -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Green Apples"/>
+            <img src="images/green-apples.jpg" alt="Green Apples"/>
+            <div class="ingredient-info">
+              <span>Green Apples</span>
+              <span class="price">$13</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Oranges -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Oranges"/>
+            <img src="images/oranges.jpg" alt="Oranges"/>
+            <div class="ingredient-info">
+              <span>Oranges</span>
+              <span class="price">$12</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Bok Choy -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Bok Choy"/>
+            <img src="images/bok-choy.jpg" alt="Bok Choy"/>
+            <div class="ingredient-info">
+              <span>Bok Choy</span>
+              <span class="price">$9</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Bananas -->
+        <div class="ingredient-card">
+          <label>
+            <input type="checkbox" class="ingredient-checkbox" value="Bananas"/>
+            <img src="images/bananas.jpg" alt="Bananas"/>
+            <div class="ingredient-info">
+              <span>Bananas</span>
+              <span class="price">$10</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right: build form -->
+    <section class="build-form-section">
+      <form id="build-form">
+        <!-- Add item -->
+        <div class="form-group">
+          <label for="item">Add item</label>
+          <input list="item-list" id="item" placeholder="Apple" />
+          <datalist id="item-list">
+            <option value="Strawberries">
+            <option value="Spinach">
+            <option value="Blueberries">
+            <option value="Cabbage">
+            <option value="Juice Syrup">
+            <option value="Pineapples">
+            <option value="Red Apples">
+            <option value="Green Apples">
+            <option value="Oranges">
+            <option value="Bok Choy">
+            <option value="Bananas">
+          </datalist>
+        </div>
+
+        <!-- Add Sugar -->
+        <div class="form-group">
+          <label for="sugar">Add Sugar (tsp)</label>
+          <input type="number" id="sugar" min="0" placeholder="0" />
+        </div>
+
+        <!-- Add Milk -->
+        <div class="form-group">
+          <label>Add Milk</label>
+          <div class="radio-group">
+            <label><input type="radio" name="milk" value="Lactose free" checked> Lactose free</label>
+            <label><input type="radio" name="milk" value="Oat milk"> Oat milk</label>
+            <label><input type="radio" name="milk" value="Almond milk"> Almond milk</label>
+          </div>
+        </div>
+
+        <!-- Add Water -->
+        <div class="form-group">
+          <label>Add water</label>
+          <div class="radio-group">
+            <label><input type="radio" name="water" value="Yes" checked> Yes</label>
+            <label><input type="radio" name="water" value="No"> No</label>
+          </div>
+        </div>
+
+        <!-- Choose Syrup -->
+        <div class="form-group">
+          <label>Choose the syrup</label>
+          <div class="radio-group">
+            <label><input type="radio" name="syrup" value="Orange" checked> Orange</label>
+            <label><input type="radio" name="syrup" value="Watermelon"> Watermelon</label>
+            <label><input type="radio" name="syrup" value="Coconut"> Coconut</label>
+          </div>
+        </div>
+
+        <!-- Submit -->
+      
+        <a href="checkout.html" class="btn">Add to cart</a>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img"/>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Customer service</a></li>
+          <li><a href="#">How to guides</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <p>Let’s stay in touch! Sign up to our newsletter and get the best deals!</p>
+      <form>
+        <input type="email" placeholder="Insert your email address here"/>
+        <button class="btn small">Subscribe now</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/icon-facebook.svg" alt="Facebook"/>
+      <img src="images/icon-instagram.svg" alt="Instagram"/>
+    </div>
+  </footer>
+
+  <script src="js/build.js" defer></script>
+</body>
+</html>
+
+

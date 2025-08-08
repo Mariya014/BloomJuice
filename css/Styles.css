@@ -1,0 +1,311 @@
+/* RESET & VARIABLES */
+* { box-sizing: border-box; margin:0; padding:0; }
+:root {
+  --brand-yellow: #FFD93D;
+  --brand-coral:  #FF6B6B;
+  --brand-mint:   #A8E6CF;
+  --dark-grey:    #333;
+  --light-grey:   #F5F5F5;
+  --btn-bg:       #333;
+  --btn-color:    #fff;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  color: var(--dark-grey);
+}
+
+/* UTILITIES */
+.container { width: 90%; max-width: 1200px; margin: auto; }
+.grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap:1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap:1rem; }
+
+/* BANNER */
+.banner {
+  background: var(--dark-grey);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* HEADER */
+
+/* constrain logo to a reasonable width */
+.logo-img {
+  max-width: 120px;   /* or whatever fits your header */
+  height: auto;
+  display: block;     /* removes any unexpected inline gaps */
+}
+
+.site-header {
+  background: var(--brand-coral);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.nav-links a {
+  color: #fff;
+  margin: 0 0.75rem;
+  text-decoration: none;
+}
+.search input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+}
+/*APP HERO*/
+.app-hero {
+  width: 100%;
+  overflow: hidden;    /* in case it’s inside a fixed-width parent */
+}
+.app-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;   /* crops nicely if you ever set a max-height */
+  max-width: 1200px;   /* optional: prevents excessive upscaling on very wide screens */
+  margin: 0 auto;
+}
+
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+.btn.outline {
+  background: transparent;
+  border: 2px solid var(--btn-bg);
+}
+.btn.small {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+/* HERO */
+.hero {
+  background: var(--brand-yellow);
+  padding: 2rem 0;
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.hero-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero-text p {
+  max-width: 450px;
+}
+
+/* TEASERS */
+.teasers {
+  background: var(--brand-yellow);
+  padding: 1rem 0;
+}
+.teasers .card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* PRODUCTS */
+.products {
+  background: var(--brand-mint);
+  padding: 2rem 0;
+  text-align: center;
+}
+.products h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.product-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 4px;
+}
+.product-card h3 {
+  margin: 0.75rem 0 0.5rem;
+}
+.product-card p {
+  font-size: 0.9rem;
+}
+
+/* SUBSCRIPTION */
+.subscribe {
+  background: var(--brand-yellow);
+  padding: 2rem 0;
+  text-align: center;
+}
+.subscription-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+.subscription-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.subscription-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+/* BESTSELLERS */
+.bestsellers {
+  background: var(--brand-yellow);
+  padding: 2rem 0;
+  text-align: center;
+}
+.bestsellers .carousel {
+  align-items: center;
+}
+.price {
+  display: block;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* FOOTER */
+.site-footer {
+  background: var(--dark-grey);
+  color: #fff;
+}
+.footer-top {
+  padding: 2rem 0;
+}
+.footer-top ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.footer-top ul li a {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: block;
+  margin: 0.25rem 0;
+}
+.footer-newsletter {
+  background: var(--light-grey);
+  color: var(--dark-grey);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+.footer-newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.footer-newsletter input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+}
+.footer-bottom img {
+  width: 24px;
+  margin: 0 0.5rem;
+}
+
+/* RESPONSIVE: Tablets */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .nav-links {
+    display: none; /* swap in a hamburger menu as needed */
+  }
+  .site-header .search {
+    margin-top: 1rem;
+  }
+  .subscription-icons {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+/* RESPONSIVE: Mobile */
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .search input {
+    width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .footer-top {
+    display: block;
+    text-align: center;
+  }
+  .footer-top > div {
+    margin-bottom: 1rem;
+  }
+}
+.custom-juice-card {
+  grid-column: span 3;
+  padding: 2rem;
+  background: #f5f5f5;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.custom-juice-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.custom-juice-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.custom-juice-card .btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+}

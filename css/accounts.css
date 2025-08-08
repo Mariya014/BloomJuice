@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.sidebar {
+    background-color: #a7f3d0;
+    padding: 20px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+    font-size: 16px;
+    color: #000;
+}
+
+.sidebar li i {
+    margin-right: 10px;
+}
+
+.report-buttons button {
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+}
+
+.sidebar-bottom p {
+    margin: 10px 0;
+}
+
+.main {
+    flex: 1;
+    background-color: #fde047;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.leftbar{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+.section-title {
+    font-size: 22px;
+    margin: 20px 0 10px 0;
+}
+
+.print-btn {
+    background-color: #fb7185;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.accounts-grid,
+.cards-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.account-card,
+.card-card {
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 260px;
+}
+
+.card-card {
+    background: #f3f4f6;
+    color: #000;
+}
+
+.account-card .details-btn,
+.card-card .details-btn {
+    background: #d1d5db;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-info {
+    margin-top: 10px;
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Menu</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/filter.css" />
+</head>
+<body>
+
+  <!-- Free-shipping banner -->
+  <div class="banner">
+    For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="juice.html" class="active">Juice</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search">
+        <input type="search" placeholder="Search product" />
+      </div>
+    </div>
+  </header>
+
+  <!-- App Hero -->
+  <section class="app-hero">
+    <img src="images/app-hero.png" alt="Bloom Juice app showcase" />
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-section__body">
+          
+          <!-- Sidebar filters -->
+          <aside class="filter-sidebar">
+            <form>
+              <div class="filter-group">
+                <label for="juice-type">Juice type</label>
+                <select id="juice-type">
+                  <option>All</option>
+                  <option>Green Power Punch</option>
+                  <option>Berry Bliss Medley</option>
+                  <option>Signature Smoothie Creations</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="size">Size</label>
+                <select id="size">
+                  <option>All</option>
+                  <option>Small</option>
+                  <option>Medium</option>
+                  <option>Large</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="strength">Strength</label>
+                <select id="strength">
+                  <option>All</option>
+                  <option>Light</option>
+                  <option>Regular</option>
+                  <option>Extra</option>
+                </select>
+              </div>
+
+              <fieldset class="filter-group">
+                <legend>Sugar</legend>
+                <label><input type="checkbox" /> White</label>
+                <label><input type="checkbox" /> Brown</label>
+              </fieldset>
+
+              <div class="filter-group">
+                <label for="source">Source</label>
+                <select id="source">
+                  <option>All</option>
+                  <option>Organic</option>
+                  <option>Cold-pressed</option>
+                  <option>Raw</option>
+                </select>
+              </div>
+
+              <!-- Custom Yours button -->
+              <div class="filter-group">
+                <a href="build.html" class="btn full-width">Custom Yours</a>
+              </div>
+            </form>
+          </aside>
+
+          <!-- Products Grid -->
+          <div class="filter-grid grid-3">
+            <div class="product-card small regular white organic">
+              <img src="images/green-juice.webp" alt="Green Power Punch" loading="lazy">
+              <h3>Green Power Punch</h3>
+              <p>A revitalizing combination of kale, spinach, apple, and celery—perfect for an energy boost.</p>
+              <a href="green-power-punch.html" class="btn">Buy now</a>
+            </div>
+
+            <div class="product-card medium light brown raw">
+              <img src="images/berry-medley.webp" alt="Berry Bliss Medley" loading="lazy">
+              <h3>Berry Bliss Medley</h3>
+              <p>A delightful blend of strawberries, blueberries, and raspberries for a sweet, antioxidant-packed treat.</p>
+              <a href="berry-bliss-medley.html" class="btn">Buy now</a>
+            </div>
+
+            <div class="product-card large regular white cold-pressed">
+              <img src="images/tropical-mix.webp" alt="Tropical Mix" loading="lazy">
+              <h3>Tropical Mix</h3>
+              <p>Transport yourself to the tropics with this vibrant blend of pineapple, orange, and a splash of lime.</p>
+              <a href="tropical-mix.html" class="btn">Buy now</a>
+            </div>
+
+            <div class="product-card small extra brown organic">
+              <img src="images/banana-smoothie.webp" alt="Banana Smoothie" loading="lazy">
+              <h3>Banana Yogurt & Honey Smoothie</h3>
+              <p>A rich and creamy blend of banana, yogurt, and honey—our sweetest treat yet.</p>
+              <a href="banana-smoothie.html" class="btn">Buy now</a>
+            </div>
+
+            <div class="product-card medium light white cold-pressed">
+              <img src="images/cocoa-almond.webp" alt="Cocoa & Almond Smoothie" loading="lazy">
+              <h3>Cocoa & Almond Butter Smoothie</h3>
+              <p>Decadent cocoa meets creamy almond butter and banana for a protein-packed delight.</p>
+              <a href="cocoa-almond-bliss.html" class="btn">Buy now</a>
+            </div>
+
+            <div class="product-card large regular brown raw">
+              <img src="images/peach-smoothie.webp" alt="Peach & Coconut Lime Smoothie" loading="lazy">
+              <h3>Peach & Coconut Lime Smoothie</h3>
+              <p>Tropical peaches, coconut milk, and a hint of lime—sunshine in a glass.</p>
+              <a href="peachy-coconut-cooler.html" class="btn">Buy now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Customer service</a></li>
+          <li><a href="#">How to guides</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <p>Let’s stay in touch! Sign up to our newsletter and get the best deals!</p>
+      <form>
+        <input type="email" placeholder="Insert your email address here" />
+        <button type="submit" class="btn small">Subscribe now</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/icon-facebook.svg" alt="Facebook">
+      <img src="images/icon-instagram.svg" alt="Instagram">
+    </div>
+  </footer>
+
+  <!-- Filter logic -->
+  <script>
+    const filterForm = document.querySelector('form');
+    const cards = document.querySelectorAll('.product-card');
+
+    filterForm.addEventListener('change', () => {
+      const type = document.getElementById('juice-type').value;
+      const size = document.getElementById('size').value;
+      const strength = document.getElementById('strength').value;
+      const sugars = [...filterForm.querySelectorAll('input[type="checkbox"]:checked')].map(cb => cb.nextSibling.textContent.trim());
+      const source = document.getElementById('source').value;
+
+      cards.forEach(card => {
+        const name = card.querySelector('h3').textContent.toLowerCase();
+        let show = true;
+
+        if (type !== 'All' && !name.includes(type.toLowerCase())) show = false;
+        if (size !== 'All' && !card.classList.contains(size.toLowerCase())) show = false;
+        if (strength !== 'All' && !card.classList.contains(strength.toLowerCase())) show = false;
+        if (sugars.length > 0 && !sugars.some(sugar => card.classList.contains(sugar.toLowerCase()))) show = false;
+        if (source !== 'All' && !card.classList.contains(source.toLowerCase())) show = false;
+
+        card.style.display = show ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
+

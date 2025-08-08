@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bloom Juice — Banana Smoothie</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="css/Styles.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+
+  <!-- Banner + Header -->
+  <div class="banner">For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="juice.html">Juice</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="search"><input type="search" placeholder="Search product" /></div>
+    </div>
+  </header>
+
+  <!-- Product Details -->
+  <main class="container">
+    <div class="product-main">
+
+      <!-- Left: Product image -->
+      <div class="product-image">
+        <img src="images/banana-smoothie.webp" alt="Banana Smoothie">
+      </div>
+
+      <!-- Right: Details -->
+      <div class="product-info">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a> <span>›</span>
+          <a href="juice.html">All products</a> <span>›</span>
+          <span>Banana Smoothie</span>
+        </div>
+
+        <h1>Banana Smoothie</h1>
+        <p class="subtitle">creamy banana with golden honey</p>
+
+        <div class="rating">
+          <span>Sweet &amp; Energizing</span>
+          <span class="stars">★★★★★</span>
+          <small>(83 Reviews)</small>
+        </div>
+
+        <p class="description">
+          Creamy Banana Dream blended with yogurt and golden honey. It’s a smooth and indulgent choice for breakfast or a mid-day snack.
+        </p>
+
+        <div class="quantity-price">
+          <div class="quantity">
+            <button id="dec">−</button>
+            <span id="qty">1</span>
+            <button id="inc">+</button>
+          </div>
+          <div class="price">$<span id="price-val">31.00</span></div>
+        </div>
+
+        <div class="purchase-buttons">
+          <a href="checkout.html?product=banana-smoothie" class="btn">Check out</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <!-- Add any help or links here -->
+    </div>
+  </footer>
+
+  <!-- Quantity Script (optional: keeps price display updated) -->
+  <script>
+    const qtyEl = document.getElementById('qty');
+    const priceEl = document.getElementById('price-val');
+    let qty = 1;
+    const unitPrice = 31.00;
+    document.getElementById('inc').onclick = () => {
+      qty++;
+      update();
+    };
+    document.getElementById('dec').onclick = () => {
+      if (qty > 1) qty--;
+      update();
+    };
+    function update() {
+      qtyEl.textContent = qty;
+      priceEl.textContent = (unitPrice * qty).toFixed(2);
+    }
+  </script>
+</body>
+</html>

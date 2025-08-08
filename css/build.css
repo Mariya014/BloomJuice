@@ -1,0 +1,124 @@
+/* build.css */
+
+.build-hero {
+  position: relative;
+  text-align: center;
+}
+.build-hero img {
+  width: 100%;
+  height: auto;
+}
+.build-hero__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #333;
+  padding: 1rem 2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Layout */
+.build-section {
+  display: flex;
+  gap: 2rem;
+  background: var(--brand-yellow);
+  padding: 2rem 0;
+}
+@media (max-width: 768px) {
+  .build-section {
+    flex-direction: column;
+  }
+}
+
+/* Ingredients sidebar */
+.ingredients-sidebar {
+  flex: 0 0 220px;
+}
+.ingredients-sidebar h2 {
+  margin-bottom: 1rem;
+  color: var(--dark-grey);
+}
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.ingredient-card label {
+  display: block;
+  position: relative;
+  border: 1px solid var(--dark-grey);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+.ingredient-card input[type="checkbox"] {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.ingredient-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ingredient-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--dark-grey);
+}
+.ingredient-info .price {
+  font-weight: bold;
+}
+
+/* Build form section */
+.build-form-section {
+  flex: 1;
+}
+form#build-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 400px;
+  margin: auto;
+}
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: var(--dark-grey);
+}
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--dark-grey);
+  border-radius: 4px;
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--dark-grey);
+}
+.btn {
+  background: var(--dark-grey);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: flex-start;
+}

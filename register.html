@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - Bloom Juice</title>
+  <link rel="stylesheet" href="css/Styles.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <style>
+    body {
+      background-color: #a7f3d0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      
+    }
+.reg-box{
+  padding: 2rem 0
+}
+    .form-box {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Banner -->
+  <div class="banner">
+    For free shipping on orders over $100 use code <strong>FREESHIPPINGYAY</strong>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+        </a>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="customer_login.html" class="active">Log in</a>
+      </nav>
+      <div class="search">
+        <input type="search" placeholder="Search product" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb container">
+    <a href="index.html">Home</a>
+    <span class="sep">›</span>
+    <span>Registration</span>
+  </nav>
+<section class="reg-box">
+  <div class="form-box">
+    <h2>Customer Registration</h2>
+    <form action="register.php" method="POST">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+    <div class="login-link">
+      <p>Already have an account? <a href="customer_login.html">Log in</a></p>
+    </div>
+  </div>
+  </section>
+   <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top grid-3">
+      <div class="logo">
+        <img src="images/logo.png" alt="Bloom Juice logo" class="logo-img" />
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Customer service</a></li>
+          <li><a href="#">How to guides</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+          <li><a href="#">Subscriptions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <p>Let’s stay in touch! Sign up to our newsletter and get the best deals!</p>
+      <form>
+        <input type="email" placeholder="Insert your email address here" />
+        <button type="submit" class="btn small">Subscribe now</button>
+      </form>
+    </div>
+    <div class="footer-bottom">
+      <img src="images/icon-facebook.svg" alt="Facebook" />
+      <img src="images/icon-instagram.svg" alt="Instagram" />
+    </div>
+  </footer>
+</body>
+</html>

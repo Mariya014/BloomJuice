@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #facc15; /* Yellow */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  color: #000;
+  
+}
+.sidebar nav{
+    margin-bottom: 250px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+}
+
+.sidebar li i {
+  margin-right: 10px;
+}
+
+.sidebar-bottom p {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Main Area */
+.main-content {
+  flex: 1;
+  background-color: #a7f3d0; /* Mint Green */
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.topbar {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.topbar .profile {
+  font-size: 16px;
+  color: #333;
+}
+
+.topbar .profile i {
+  margin: 0 5px;
+}
+
+.form-section h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.tabs {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.tabs span {
+  font-size: 14px;
+  cursor: pointer;
+  color: #222;
+}
+
+.active-tab {
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+
+/* Profile Pic */
+.profile-pic {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  margin-bottom: 20px;
+  }
+a {
+color: #000;
+text-decoration: none;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  left: 45px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px;
+  font-size: 12px;
+}
+
+/* Form */
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.user-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.save-btn {
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 200px;
+  align-self: flex-start;
+}
+.inventory-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+
+/* Left order panel */
+.order-panel {
+  flex: 1;
+  max-width: 40%;
+}
+ label
+{
+    font-size: 20px;
+}
+.order-panel select {
+  padding: 8px;
+  width: 90%;
+  border-radius: 6px;
+  margin: 10px 0;
+  background-color: #000;
+  color: #ffffff;
+}
+
+.balance-label {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.balance-value {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.product-grid img {
+  height: 60px;
+  object-fit: contain;
+}
+.product-grid div {
+  background: #fff;
+  padding: 5px;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 12px;
+  display: flex;
+    flex-direction: column;
+  box-shadow: 0 0 2px rgba(0,0,0,0.1);
+}
+
+.saved-providers {
+  margin-top: 20px;
+}
+
+.provider-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.provider {
+  background: #e5e7eb;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right transfer panel */
+.transfer-panel {
+  flex: 1;
+}
+
+.transfer-tabs {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.transfer-tabs .active-tab {
+  border-bottom: 2px solid #000;
+  font-weight: bold;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transfer-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.transfer-form .form-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.save-btn {
+  margin-top: 10px;
+  /* padding: 12px; */
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}

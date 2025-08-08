@@ -1,0 +1,160 @@
+/* purchase.css */
+
+/* Page background */
+.purchase-page {
+  background: var(--brand-yellow);
+  padding: 2rem 0;
+}
+
+/* Two-column layout */
+.purchase-section {
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .purchase-section {
+    flex-direction: column;
+  }
+}
+
+/* Overview column */
+.overview {
+  flex: 1;
+}
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--dark-grey);
+  text-decoration: none;
+}
+.overview h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.overview p {
+  margin-bottom: 1.5rem;
+}
+
+/* Item card */
+.item-card {
+  display: flex;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.item-card img {
+  width: 150px;
+  object-fit: cover;
+}
+.item-info {
+  padding: 1rem;
+}
+.item-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+.item-price {
+  font-weight: bold;
+  float: right;
+}
+.item-info p {
+  font-size: 0.95rem;
+}
+
+/* Shipping & payment options */
+.overview h3 {
+  margin: 1rem 0 0.5rem;
+}
+.shipping-methods label,
+.payment-options label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.shipping-methods input,
+.payment-options input {
+  margin-right: 0.5rem;
+}
+.method-price {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+.card-logos {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.card-logos img {
+  height: 32px;
+}
+
+/* Payment details column */
+.payment-details {
+  flex: 1;
+}
+.pickup-delivery {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.opt-btn {
+  flex: 1;
+  padding: 0.6rem;
+  background: var(--dark-grey);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.opt-btn.active {
+  background: #000;
+}
+.payment-details h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.payment-details p {
+  margin-bottom: 1rem;
+}
+
+/* Form fields */
+.payment-details form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--dark-grey);
+  background: transparent;
+  padding: 0.6rem 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Finish button */
+.btn.full {
+  width: 100%;
+  margin-top: 1rem;
+}
+.payment-tabs {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.tab {
+  flex: 1;
+  padding: 0.6rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tab.active {
+  background: #000;
+}
+.hidden {
+  display: none;
+}
