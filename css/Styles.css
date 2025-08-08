@@ -283,6 +283,7 @@ body {
     margin-bottom: 1rem;
   }
 }
+<<<<<<< HEAD
 .custom-juice-card {
   grid-column: span 3;
   padding: 2rem;
@@ -309,3 +310,5 @@ body {
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
 }
+=======
+>>>>>>> 10c7d83e462f8619ab3f02de271cbac29e16055e

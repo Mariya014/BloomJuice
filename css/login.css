@@ -68,15 +68,22 @@
   background: transparent;
   border: 2px solid var(--dark-grey);
 }
+<<<<<<< HEAD
  .button-row a{
   text-decoration: none;
  }
+=======
+
+>>>>>>> 10c7d83e462f8619ab3f02de271cbac29e16055e
 /* Breadcrumb */
 .breadcrumb {
   font-size: 0.9rem;
   margin: 1rem 0 0;
   color: var(--dark-grey);
+<<<<<<< HEAD
   font-family: 'Courier New', Courier, monospace;
+=======
+>>>>>>> 10c7d83e462f8619ab3f02de271cbac29e16055e
 }
 .breadcrumb .sep {
   margin: 0 0.5rem;
